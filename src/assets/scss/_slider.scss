@@ -1,0 +1,503 @@
+/*----- 3. Slider style  ------*/
+
+// @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../../../node_modules/swiper/css/swiper.css"; 
+// // @import "../../../node_modules/swiper/swiper-bundle.min.css";
+// @import "../../../node_modules/animate.css/animate.min.css";
+// @import "../../../node_modules/lightgallery/css/lightgallery.css";
+// @import "../../../node_modules/react-modal-video/scss/modal-video.scss";
+@import "common.scss";
+
+// @import "~animate.css/animate.min.css";
+// @import "~lightgallery.js/dist/css/lightgallery.css";
+ 
+// Font Family
+$poppins: "Poppins", sans-serif;
+$abrilfatface: "Abril Fatface", cursive;
+$cormorantgaramond: "Cormorant Garamond";
+$greatvibes: "Great Vibes", cursive;
+$lobster: "Lobster", cursive;
+$josefin: "Josefin Sans", sans-serif;
+
+// text Colors ---------------
+
+$white: #ffffff;
+$black: #000000;
+$grey: #f6f7f8;
+$red: #f6f7f8;
+$green: #f6f7f8;
+
+// bg Colors ---------------
+
+$bg-white: #ffffff;
+$bg-black: #000000;
+$bg-grey: #f6f6f8;
+$bg-purple: #f0e0ff;
+
+// Heading Color
+$heading-color: #000000;
+
+// Theme Color
+$theme-color: #a749ff;
+
+// Responsive Variables
+$xx-layout: "only screen and (min-width: 1366px) and (max-width: 1600px)";
+$xl-layout: "only screen and (min-width: 1200px) and (max-width: 1365px)";
+$lg-layout: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$md-layout: "only screen and (min-width: 768px) and (max-width: 991px)";
+$xs-layout: "only screen and (max-width: 767px)";
+$sm-layout: "only screen and (min-width: 576px) and (max-width: 767px)";
+$xxs-layout: "only screen and (min-width: 320px) and (max-width: 479px)";
+
+
+/*----- 3. Slider style  ------*/
+
+.slider-height-1 {
+    height: 750px;
+    @media #{$xl-layout} {
+      height: 650px;
+    }
+    @media #{$lg-layout} {
+      height: 520px;
+    }
+    @media #{$md-layout} {
+      height: 450px;
+    }
+    @media #{$xs-layout} {
+      height: auto;
+      padding: 50px 0 0;
+      &.slider-height-res15 {
+        padding: 0 0 0;
+      }
+    }
+    @media #{$sm-layout} {
+      padding: 38px 0 0;
+    }
+    &.slider-height-res {
+      @media #{$xs-layout} {
+        position: relative;
+  
+        height: 400px;
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+  
+          width: 100%;
+          height: 100%;
+  
+          content: "";
+  
+          opacity: 0.5;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .bg-orange {
+    background-color: #FEF5EF;
+  }
+  
+  .single-slider {
+    display: flex;
+    align-items: center;
+    // align-items: flex-end;
+    .slider-content {
+      padding: 100px 0 0;
+      // margin-bottom: 10rem;
+      @media #{$xl-layout} {
+        padding: 80px 0 0;
+      }
+      @media #{$lg-layout} {
+        padding: 45px 0 0;
+      }
+      @media #{$md-layout} {
+        padding: 0 0 0;
+      }
+      @media #{$xs-layout} {
+        padding: 0 0 40px;
+        text-align: center;
+      }
+      @media #{$sm-layout} {
+        padding: 0 0 0;
+  
+        text-align: left;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+  
+        margin: 0;
+      }
+      h1 {
+        font-size: 72px;
+        line-height: 97px;
+  
+        margin: 6px 0 37px;
+  
+        color: #010101;
+        @media #{$lg-layout} {
+          font-size: 52px;
+          line-height: 65px;
+        }
+        @media #{$md-layout} {
+          font-size: 40px;
+          line-height: 52px;
+  
+          margin: 6px 0 20px;
+        }
+        @media #{$xs-layout} {
+          font-size: 33px;
+          line-height: 48px;
+  
+          margin: 6px 0 20px;
+        }
+        @media #{$sm-layout} {
+          font-size: 30px;
+  
+          margin: 6px 0 10px;
+        }
+      }
+      .slider-btn {
+        a {
+          font-size: 16px;
+          line-height: 1;
+  
+          display: inline-block;
+  
+          padding: 19px 50px 21px;
+  
+          text-transform: uppercase;
+  
+          color: #010101;
+          border: 1px solid #333;
+          @media #{$md-layout} {
+            padding: 15px 35px 17px;
+          }
+          @media #{$xs-layout} {
+            padding: 15px 35px 17px;
+          }
+          &:hover {
+            color: #fff;
+            border: 1px solid $theme-color;
+          }
+        }
+      }
+      &.slider-content-10 {
+        padding-top: 0;
+        @media #{$xs-layout} {
+          display: block;
+  
+          width: 100%;
+  
+          text-align: center;
+        }
+        @media #{$sm-layout} {
+          text-align: left;
+        }
+      }
+    }
+    .slider-single-img {
+      margin: 0 80px 0 80px;
+      @media #{$xl-layout} {
+        margin: 0 0 0 0;
+      }
+      @media #{$lg-layout} {
+        margin: 0 0 0 0;
+      }
+      @media #{$md-layout} {
+        margin: 0 0 0 0;
+      }
+      @media #{$xs-layout} {
+        margin: 0 0 40px 0;
+        text-align: center;
+      }
+    }
+    &.single-slider-10 {
+      align-items: center;
+    }
+  }
+  
+  .swiper-slide .slider-content * {
+    -webkit-animation-duration: 1.3s;
+            animation-duration: 1.3s;
+  
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  
+  .swiper-slide-active {
+    .slider-animated-1 {
+      h3 {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.0s;
+                animation-delay: 1.0s;
+      }
+      h1 {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.3s;
+                animation-delay: 1.3s;
+      }
+      h5 {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.5s;
+                animation-delay: 1.5s;
+      }
+      p {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.5s;
+                animation-delay: 1.5s;
+      }
+      a {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.6s;
+                animation-delay: 1.6s;
+      }
+      &.slider-single-img img {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.6s;
+                animation-delay: 1.6s;
+      }
+      &.single-slider-img4 img {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.6s;
+                animation-delay: 1.6s;
+      }
+      &.slider-singleimg-hm9 img {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.6s;
+                animation-delay: 1.6s;
+      }
+      &.slider-singleimg-hm11 img {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.6s;
+                animation-delay: 1.6s;
+      }
+      .content-img img {
+        -webkit-animation-name: fadeInUp;
+                animation-name: fadeInUp;
+        -webkit-animation-delay: 1.0s;
+                animation-delay: 1.0s;
+      }
+    }
+    .slider-animated-2 {
+      h3 {
+        -webkit-animation-name: fadeInLeft;
+                animation-name: fadeInLeft;
+        -webkit-animation-delay: 1.0s;
+                animation-delay: 1.0s;
+      }
+      h1 {
+        -webkit-animation-name: fadeInLeft;
+                animation-name: fadeInLeft;
+        -webkit-animation-delay: 1.3s;
+                animation-delay: 1.3s;
+      }
+      a {
+        -webkit-animation-name: fadeInLeft;
+                animation-name: fadeInLeft;
+        -webkit-animation-delay: 1.6s;
+                animation-delay: 1.6s;
+      }
+      &.slider-singleimg-hm10 img {
+        -webkit-animation-name: fadeInRight;
+                animation-name: fadeInRight;
+        -webkit-animation-delay: 1.6s;
+                animation-delay: 1.6s;
+      }
+    }
+  }
+  
+  .nav-style-1 {
+    .ht-swiper-button-nav {
+      font-size: 80px;
+  
+      position: absolute;
+      top: 50%;
+      left: 80px;
+  
+      display: inline-block;
+      visibility: hidden;
+  
+      width: 80px;
+      height: 80px;
+      padding: 0;
+  
+      transition: all 0.3s ease 0s;
+      transform: translateY(-50%);
+      text-align: center;
+  
+      opacity: 0;
+      color: #999;
+      border: none;
+      background: none;
+      @media #{$xl-layout} {
+        left: 30px;
+      }
+      @media #{$lg-layout} {
+        left: 30px;
+      }
+      @media #{$md-layout} {
+        font-size: 60px;
+  
+        left: 15px;
+      }
+      @media #{$xs-layout} {
+        font-size: 50px;
+  
+        left: 15px;
+      }
+      &:hover {
+        color: $theme-color;
+      }
+      &.swiper-button-next {
+        right: 80px;
+        left: auto;
+        @media #{$xl-layout} {
+          right: 30px;
+        }
+        @media #{$lg-layout} {
+          right: 30px;
+        }
+        @media #{$md-layout} {
+          right: 15px;
+        }
+        @media #{$xs-layout} {
+          right: 15px;
+        }
+      }
+    }
+  
+    &.nav-testi-style {
+      .owl-nav {
+        div {
+          font-size: 50px;
+  
+          left: -155px;
+  
+          color: #8d8c8c;
+          @media #{$xl-layout} {
+            left: -80px;
+          }
+          @media #{$lg-layout} {
+            left: -80px;
+          }
+          @media #{$md-layout} {
+            left: -30px;
+          }
+          @media #{$xs-layout} {
+            display: none;
+          }
+          &:hover {
+            color: #3d6882;
+          }
+          &.owl-next {
+            right: -155px;
+            left: auto;
+            @media #{$xl-layout} {
+              right: -80px;
+            }
+            @media #{$lg-layout} {
+              right: -80px;
+            }
+            @media #{$md-layout} {
+              right: -30px;
+            }
+          }
+        }
+      }
+      &.nav-testi-mrg {
+        .owl-nav {
+          div {
+            left: -80px;
+  
+            color: #fff;
+            @media #{$md-layout} {
+              left: 0;
+            }
+            @media #{$xs-layout} {
+              display: none;
+            }
+            &.owl-next {
+              right: -80px;
+              left: auto;
+              @media #{$md-layout} {
+                right: 0;
+                left: auto;
+              }
+              @media #{$xs-layout} {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Helps to show Side Arrows
+  .slider-area {
+    &:hover .nav-style-1 .ht-swiper-button-nav {
+      visibility: visible;
+  
+      opacity: 1;
+    }
+    &.ml-10 {
+      margin-left: 0;
+    }
+    @media #{$xl-layout} {
+      &.ml-70 {
+        margin-left: 15px;
+      }
+      &.mr-70 {
+        margin-right: 15px;
+      }
+    }
+    @media #{$lg-layout} {
+      &.ml-70 {
+        margin-left: 30px;
+      }
+      &.mr-70 {
+        margin-right: 30px;
+      }
+    }
+    @media #{$md-layout} {
+      &.ml-70 {
+        margin-left: 40px;
+      }
+      &.mr-70 {
+        margin-right: 40px;
+      }
+    }
+    @media #{$xs-layout} {
+      &.ml-70 {
+        margin-left: 15px;
+      }
+      &.mr-70 {
+        margin-right: 15px;
+      }
+    }
+  
+  
+  
+  }
+  // It is helping to remove double side Arrows
+  .ht-swiper-button-nav {
+    &:after {
+      font-size: 0;
+    }
+  }
+  
+  
+  
+  

@@ -1,0 +1,36 @@
+
+.account_form {
+    box-shadow: 0px 0px 7px 5px #0000000a;
+    padding: 30px 40px;
+    background: #fff;
+}
+
+.form-control:focus {
+    border-color: green !important; 
+}
+
+.account_form h3 {
+    text-align: center;
+}
+
+.account_form form {
+    padding-top: 30px;
+}
+
+.account_form form .default-form-box {
+    margin-bottom: 30px;
+}
+
+.login_submit {
+    text-align: center;
+}
+
+.remember_area {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#login_area .active {
+    color: var(--main-theme-color);
+    text-decoration: none;
+}
