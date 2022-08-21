@@ -7,6 +7,7 @@ export const productListReducer = (state = { products: [] }, action) => {
   
       case PRODUCT_LIST_SUCCESS:
         return {
+        //   ...state,  
           loading: false,
           products: action.payload, // Products ki waja say error tha
           // products: action.payload.products, agar yea likhay gy to ProShop wala project chalay ga

@@ -14,12 +14,23 @@ function Product({ product, props }) {
   // const [price, setPrice] = useState([0, 0]);
   // const [ok, setOk] = useState(false);
 
+  console.log("Image Data",product.image);
+
   return (
     <>
      <div className={`product-wrap`}>
           <div className="product-img">
             <div >
-              <Link to={`/product/${product.id}`}>
+              <img src={`https://`+ product.image} />
+              {/* <img src="https://media.idownloadblog.com/wp-content/uploads/2018/08/New-iPhone-XS-wallpaper-for-iPhone-8.jpg" /> */}
+              {/* <Link to={`/product/${product.id}`}>
+              <img
+                className="default-img"
+                src={product.image}
+                alt=""
+              />
+              </Link> */}
+              {/* <Link to={`/product/${product.id}`}>
               <img
                 className="default-img"
                 src={product.image[0]}
@@ -36,7 +47,7 @@ function Product({ product, props }) {
               ) : (
                 ""
               )}
-              </Link>
+              </Link> */}
             </div>
             {product.discount || product.new ? (
               <div className="product-img-badges">

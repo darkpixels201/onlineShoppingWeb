@@ -26,6 +26,7 @@ function ProductDescriptionInfo({ product, }) {
     <div> 
       <div className="product-details-content ml-70">
       <h2>{product.name}</h2>
+      {/* <h2>{product.sku}</h2> */}
       <div className="product-details-price">
         {/* {discountedPrice !== null ? (
           <Fragment>
