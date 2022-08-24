@@ -10,11 +10,14 @@ import './assets/scss/styles.scss'
 
 
 import { Provider } from 'react-redux';
+import { MaterialUIControllerProvider } from "./components/dashboard/context";
 
 
 ReactDOM.render(
   <Provider store={store}>
+    <MaterialUIControllerProvider>
   <App />
+    </MaterialUIControllerProvider>
   </Provider>,
 document.getElementById('root')
 );
