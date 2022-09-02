@@ -1,4 +1,4 @@
-import React, {useSelector, useState} from 'react'
+import React, { useState } from 'react'
 // import { fetchProducts }from '../Action/ProductAction'
 import ProductImageDescription from '../components/ProductDetail/ProductImageDescription'
 // import { listProducts } from '../Action/ProductAction'
@@ -48,11 +48,3 @@ console.log("Product Variant",productData.name);
 }
 
 export default ProductDetailScreen
-
-
- {/* <div key={filterproduct.id} className="the-new-one"> */}
-              {/* {match.params.id} */}
-              {/* <ProductImageDescription 
-                product ={filterproduct[0]}
-              />
-            </div>  */}

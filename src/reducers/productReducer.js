@@ -23,3 +23,17 @@ export const productListReducer = (state = { products: [] }, action) => {
         return state;
     }
   };
+
+  let initialState = {
+    sidebarShow: true,
+
+  }
+
+  export const changeState = (state =  initialState, action) => {
+    switch (action.type) {
+      case 'set':
+        return { ...state, ...action.payload }
+      default:
+        return state
+    }
+  }

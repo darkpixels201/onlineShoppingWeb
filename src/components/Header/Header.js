@@ -73,12 +73,13 @@ function Header() {
             <Link to="/fashion" style={{textDecoration: 'none'}}> <li><span className="dropdown-item" >Profile</span></li></Link>
                <Link to="/fashion" style={{textDecoration: 'none'}}> <li><span className="dropdown-item" >Settings</span></li></Link>
                 <li className="dropdown-divider"> </li>
-                <a style={{textDecoration: 'none'}} onClick={logoutHandler} > <li><span className="dropdown-item" >Sign out</span></li></a>
+                <a href='/#' style={{textDecoration: 'none'}} onClick={logoutHandler} > <li><span className="dropdown-item" >Sign out</span></li></a>
                  </ul>) : ( <ul className="dropdown-menu dropdown-menu-light text-small shadow">
                  <Link to="/login" style={{textDecoration: 'none'}}> <li><span className="dropdown-item" >Login</span></li></Link>
                  <Link to="/signup" style={{textDecoration: 'none'}}> <li><span className="dropdown-item" >Signup</span></li></Link>
                  <Link to="/signup" style={{textDecoration: 'none'}}> <li><span className="dropdown-item" >Become a Seller</span></li></Link>
-                </ul> )}
+                </ul>
+                 )}
                 
             </li>
 

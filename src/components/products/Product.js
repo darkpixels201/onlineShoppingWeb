@@ -1,7 +1,6 @@
 import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FiEye } from "react-icons/fi";
-import { Link } from "react-router-dom";
 import "../../assets/css/product.css";
 
 function Product({ product, props }) {
@@ -21,7 +20,7 @@ function Product({ product, props }) {
      <div className={`product-wrap`}>
           <div className="product-img">
             <div >
-              <img src={`https://`+ product.image} />
+              <img src={`https://`+ product.image} alt="Images"  />
               {/* <img src="https://media.idownloadblog.com/wp-content/uploads/2018/08/New-iPhone-XS-wallpaper-for-iPhone-8.jpg" /> */}
               {/* <Link to={`/product/${product.id}`}>
               <img

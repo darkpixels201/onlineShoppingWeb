@@ -1,21 +1,20 @@
 import React, {useState, useEffect} from 'react'
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { signup } from '../actions/userAction';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 
-function Signup({location}) {
+function Signup(location) {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const [message] = useState("");
 
 
-  const history = useHistory();
-
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const redirect = location.search ? location.search.split("=")[1] : "/";
@@ -26,14 +25,14 @@ function Signup({location}) {
 
   useEffect(() => {
     if (userInfo) {
-      history.push(redirect);
+        navigate.push(redirect);
     }
-  }, [history, userInfo, redirect]);
+  }, [navigate, userInfo, redirect]);
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       console.log("Passwords do not match");
     } else {
       dispatch(signup(name, email, password, ));

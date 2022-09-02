@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch , useSelector } from "react-redux";
 import { Row, Col, Container } from "react-bootstrap";
 import Product from '../components/products/Product'
-import axios from "axios";
 import {productAction}  from '../actions/productAction'
-import Message from "../components/Message/Message";
-import Loader from "../components/Loader";
+// import Message from "../components/Message/Message";
+// import Loader from "../components/Loader";
 // import {products}  from '../components/products/prodzzuctsArray'
 
-function ProductScreen({ history }) {
+function ProductScreen() {
 
 // const [productData, setProductData] = useState([])
 // const [variantData, setVariantData] = useState([])
@@ -87,7 +86,7 @@ function ProductScreen({ history }) {
 
 
   const productList = useSelector((state) => state.productList);
-  const { error, loading, products } = productList;
+  const { products } = productList;
   console.log("Redux Data", products);
 
   // console.log("Product Data UseState",productData)
@@ -120,7 +119,7 @@ function ProductScreen({ history }) {
     productAction(dispatch);
     // dispatch(ProductAction)
     // dispatch(productVarition)
-}, [])
+  },[dispatch])
 
 // console.log("ListProduct", listProducts)
 // const products = []

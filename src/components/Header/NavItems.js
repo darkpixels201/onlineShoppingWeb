@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { FiChevronDown } from "react-icons/fi";
 
 // import banner from '../../assets/img/common/nav_banner.png'
@@ -24,7 +23,7 @@ function NavItems(props) {
               {props.item.childern.map((data, index) => (
             
             <li key={index}>
-                <a to={data.href}>{data.name}</a>
+                <a href='/#' to={data.href}>{data.name}</a>
             </li> 
             ))} 
         </>

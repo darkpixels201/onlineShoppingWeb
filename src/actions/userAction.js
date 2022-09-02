@@ -1,5 +1,4 @@
 import axios from "axios";
-// import Baseurl from "../components/Auth/Baseurl";
 import { 
     USER_LOGIN_REQUEST,
     USER_LOGIN_SUCCESS,
@@ -27,13 +26,12 @@ export const login = (email, Password) => async (dispatch) => {
             },
         };
         const { data } = await axios.get(
-            "https://pda.dreamhosters.com/Api/"+"Users/CheckUser.php?email="+email+"&password="+Password,
+            `"https://pda.dreamhosters.com/Api/"+"Users/CheckUser.php?email="+email+"&password="+Password`,
             config
         );
         console.log("Action Data", data)
         console.log("New Data", data.user)
         // const namedata = data.user;
-        // console.log("New New New New", namedata)
         
         dispatch ({
             type: USER_LOGIN_SUCCESS,

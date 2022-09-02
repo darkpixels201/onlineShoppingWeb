@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from 'react-router-dom'
 import { login } from '../actions/userAction'
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 
 
 function Login(location) {
-    const history = useHistory();
+    // const history = useHistory();
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const dispatch = useDispatch();
+    
+    const navigate = useNavigate()
+    const dispatch = useDispatch();
 
   const redirect = location.search ? location.search.split("=")[1] : "/";
 
@@ -23,9 +24,9 @@ function Login(location) {
 
   useEffect(() => {
     if (userInfo) {
-      history.push(redirect);
+        navigate.push(redirect);
     }
-  }, [history, userInfo, redirect]);
+  }, [navigate, userInfo, redirect]);
 
   const submitHandler = (e) => {
     e.preventDefault();

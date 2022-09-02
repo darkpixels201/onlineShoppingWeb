@@ -9,4 +9,9 @@
 /* @import './responsive.css' */
 
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
 

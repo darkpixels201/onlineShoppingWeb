@@ -1,29 +1,33 @@
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import Furniture from './pages/Furniture'
-import Fashion from './pages/Fashion'
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-// import MainProducts from "./Products/MainProducts";
-import ProductDetailScreen from "./pages/ProductDetailScreen";
-import ProductDescriptionInfo from "./components/ProductDetail/ProductDescriptionInfo";
-import Dashboard from "./pages/Dashboard";
+import React, { Suspense } from 'react'
+import { HashRouter, Route, Routes } from "react-router-dom";
+
+const Home = React.lazy(() => import('./pages/Home'))
+const Login = React.lazy(() => import('./pages/Login'))
+const Signup = React.lazy(() => import('./pages/Signup'))
+const DefaultLayout = React.lazy(() => import('./components/Dashboard/DefaultLayout'))
+const Sidebarnav = React.lazy(() => import('./pages/Sidebarnav'))
+const Furniture = React.lazy(() => import('./pages/Furniture'))
+const ProductDetailScreen = React.lazy(() => import('./pages/ProductDetailScreen'))
+
+ 
+
 
 function App() {
   return (
-    <Router >
-      {/* <MainProducts /> */}
-      {/* <ProductDetailScreen /> */}
-      <Switch>
-      <Route path="/" component={Home} exact />
-      <Route path="/furniture" component={Furniture}/>
-      <Route path="/fashion" component={Fashion}/>
-      <Route path="/login" component={Login} />
-      <Route path="/signup" component={Signup} />
-      <Route path="/product/:id" component={ProductDetailScreen} />
-      <Route path="/dashboard" component={Dashboard} />
-      </Switch>
-    </Router>
+    <HashRouter >
+     
+        <Suspense>
+      <Routes>
+      <Route path="/sidebarr" name="Sidebarnav" element={<Sidebarnav />} />
+      <Route exact path="/" name="Home" element={<Home />} />
+      <Route exact path="/login" name="Login" element={<Login />} />
+      <Route exact path="/signup" name="Signup" element={<Signup />} />
+      <Route path="*" name="Home" element={<DefaultLayout />} />
+      <Route path="/product/:id" element={<ProductDetailScreen />} />
+      <Route path="/furniture" name="furniture" element={<Furniture />} />
+      </Routes>
+        </Suspense>
+    </HashRouter>
   );
 }
 

@@ -48,3 +48,34 @@ export const userRegisterReducer = (state = {}, action) => {
             return state
     }
 }
+
+// export const changeState = (state = { sidebarShow: true }, action) => {
+//     switch (action.type) {
+//         case 'DRAWER_REDUCER_SET':
+//             return { sidebarShow: action.payload.sidebarShow }
+//         default:
+//             return state
+//     }
+// }
+// const initialState = {
+//     sidebarShow: true,
+//   }
+  
+//  export const changeState = (state = initialState, { type, ...rest }) => {
+//     switch (type) {
+//       case 'set':
+//         return { ...state, ...rest }
+//       default:
+//         return state
+//     }
+//   }
+
+// New One
+export const changeState = (state = {sidebarShow: true}, { type, ...rest }) => {
+    switch (type) {
+      case 'set':
+        return { ...state, ...rest }
+      default:
+        return state
+    }
+  }

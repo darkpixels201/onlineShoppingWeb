@@ -1,6 +1,4 @@
 import axios from 'axios';
-import React from 'react'
-// import { useDispatch as dispatch } from 'react-redux'
 import { PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL  } from '../constants/productConstant'
 
 
