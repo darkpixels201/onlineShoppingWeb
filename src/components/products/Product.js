@@ -15,6 +15,7 @@ function Product({ product, props }) {
 
   console.log("Image Data",product.image);
 
+
   return (
     <>
      <div className={`product-wrap`}>

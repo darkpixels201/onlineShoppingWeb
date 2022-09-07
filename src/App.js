@@ -22,9 +22,9 @@ function App() {
       <Route exact path="/" name="Home" element={<Home />} />
       <Route exact path="/login" name="Login" element={<Login />} />
       <Route exact path="/signup" name="Signup" element={<Signup />} />
-      <Route path="*" name="Home" element={<DefaultLayout />} />
+      <Route path="*" name="DefaultLayout" element={<DefaultLayout />} />
       <Route path="/product/:id" element={<ProductDetailScreen />} />
-      <Route path="/furniture" name="furniture" element={<Furniture />} />
+      <Route path="*" name="furniture" element={<Furniture />} />
       </Routes>
         </Suspense>
     </HashRouter>

@@ -58,11 +58,14 @@ const EmployeeUser = React.lazy(() => import('./pages/DashboardPages/EmployeeUse
 const CustomerUser = React.lazy(() => import('./pages/DashboardPages/CustomerUser'))
 const AddCategory = React.lazy(() => import('./pages/DashboardPages/AddCategory'))
 const AddDiscount = React.lazy(() => import('./pages/DashboardPages/AddDiscount'))
+
 const AddProduct = React.lazy(() => import('./pages/DashboardPages/AddProduct'))
+const ManageProducts = React.lazy(() => import('./pages/DashboardPages/ManageProducts'))
+
+
 const CategoriesList = React.lazy(() => import('./pages/DashboardPages/CategoriesList'))
 const DeliverdOrder = React.lazy(() => import('./pages/DashboardPages/DeliverdOrder'))
 const DiscountList = React.lazy(() => import('./pages/DashboardPages/DiscountList'))
-const ManageProduct = React.lazy(() => import('./pages/DashboardPages/ManageProduct'))
 const OnWayOrder = React.lazy(() => import('./pages/DashboardPages/OnWayOrder'))
 const PendingOrder = React.lazy(() => import('./pages/DashboardPages/PendingOrder'))
 const ProfitReport = React.lazy(() => import('./pages/DashboardPages/ProfitReport'))
@@ -72,7 +75,7 @@ const Stock = React.lazy(() => import('./pages/DashboardPages/Stock'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+  // { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/users', name: 'Users', element: Users },
   { path: '/users/EmployeeUser', name: 'EmployeeUser', element: EmployeeUser },
   { path: '/users/CustomerUser', name: 'CustomerUser', element: CustomerUser },
@@ -80,14 +83,18 @@ const routes = [
   { path: '/category/CategoriesList', name: 'CategoriesList', element: CategoriesList },
   { path: '/discount/AddDiscount', name: 'AddDiscount', element: AddDiscount },
   { path: '/discount/DiscountList', name: 'DiscountList', element: DiscountList },
-  { path: '/product/AddProduct', name: 'AddProduct', element: AddProduct },
-  { path: '/product/ManageProduct', name: 'ManageProduct', element: ManageProduct },
+
+  { path: '/products/AddProduct', name: 'AddProduct', element: AddProduct },
+  { path: '/products/ManageProducts', name: 'ManageProducts', element: ManageProducts },
+
+
+
   { path: '/order/OnWayOrder', name: 'OnWayOrder', element: OnWayOrder },
   { path: '/order/PendingOrder', name: 'PendingOrder', element: PendingOrder },
   { path: '/order/DeliverdOrder', name: 'DeliverdOrder', element: DeliverdOrder },
   { path: '/report/ProfitReport', name: 'ProfitReport', element: ProfitReport },
   { path: '/report/PurchaseReport', name: 'PurchaseReport', element: PurchaseReport },
-  { path: '/report/SaleReport', name: 'SaleReport', element: SaleReport },
+  { path: '/seller/report/salereport', name: 'SaleReport', element: SaleReport },
   { path: '/Stock', name: 'Stock', element: Stock },
   // { path: '/theme', name: 'Theme', element: Colors, exact: true },
   // { path: '/theme/colors', name: 'Colors', element: Colors },

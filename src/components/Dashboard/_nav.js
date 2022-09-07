@@ -42,14 +42,14 @@ const _nav = [
   // },
   {
     component: CNavGroup,
-    name: 'Report',
-    to: '/report',
+    name: 'SaleReport',
+    // to: '/report',
     icon: <TbReport size={25} style={{marginRight: '20px'}} />,
     items: [
       {
         component: CNavItem,
         name: 'Sale Report',
-        to: '/report/SaleReport',
+        to: '/seller/report/salereport',
       },
       {
         component: CNavItem,
@@ -66,21 +66,22 @@ const _nav = [
   {
     component: CNavGroup,
     name: 'Product',
-    to: '/buttons',
+    to: '/product',
     icon: <RiProductHuntLine size={25} style={{marginRight: '20px'}} />,
     items: [
       {
         component: CNavItem,
         name: 'Add Product',
-        to: '/product/AddProduct',
+        to: '/products/AddProduct',
       },
       {
         component: CNavItem,
         name: 'Manage Product',
-        to: '/product/ManageProduct',
+        to: '/products/ManageProducts',
       },
     ],
   },
+ 
   {
     component: CNavGroup,
     name: 'Users',

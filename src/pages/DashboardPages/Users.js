@@ -32,6 +32,7 @@ import { TiEdit } from "react-icons/ti";
 
 function Users() {
 
+
     // Sample how to write Icons in Array
     // payment: { name: "Mastercard", Icon:<BsTrash color="red"/> },
     // activity: {Icon: <TiEdit />},
@@ -162,7 +163,7 @@ function Users() {
                       </CTableDataCell>
                       <CTableDataCell className="text-center">
                        
-                        <div style={{color:item.user.status = "InActive" ? 'red': 'green'}}>{item.user.status}</div>
+                        <div style={{color:item.user.status == "InActive" ? 'red': 'green'}}>{item.user.status}</div>
                       </CTableDataCell>
                       <CTableDataCell className="text-center" >
                       <BsTrash className="cursor-pointer"  color="red"/>
